@@ -22,8 +22,18 @@
             color:#fff; padding:20px 0;
         }
         .container {width:90%; max-width:1200px; margin:0 auto;}
+        .logo {display:flex; align-items:center; gap:15px;}
         .logo img {height:60px;}
+        nav {margin-left:auto;}
         nav a {color:#fff; margin-left:18px; text-decoration:none; font-weight:600;}
+        
+        /* Distributor name under title */
+        .distributor-name {
+            font-size: 1.2rem;
+            margin-top:5px;
+            font-weight:500;
+            color:#fff;
+        }
         
         /* Hero */
         .hero {
@@ -81,21 +91,31 @@
             text-align:center; padding:24px 16px;
         }
         footer p {margin:6px 0;}
+        
+        @media(max-width:768px){
+            header {flex-direction:column; text-align:center;}
+            nav {margin-top:10px;}
+            nav a{margin-left:10px; margin-right:10px;}
+        }
     </style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <div class="container" style="display:flex; align-items:center;">
         <div class="logo">
-            <img src="https://companieslogo.com/img/orig/VETOQUINOL.SA-k0qowY2S.png" alt="Vetoquinol Logo"> <!-- official logo -->
+            <img src="https://companieslogo.com/img/orig/VETOQUINOL.SA-k0qowY2S.png" alt="Vetoquinol Logo">
+            <div>
+                <h1>Vetoquinol Senior Distributor</h1>
+                <div class="motto">Achieve More Together</div>
+                <div class="distributor-name">Partner: <strong>Pavan K Jadhav</strong></div>
+            </div>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#profile">Profile</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
+            <a href="profile.html">Profile</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </div>
 </header>
@@ -105,7 +125,7 @@
     <div class="container">
         <h1>Premium Animal Health Distribution</h1>
         <p>Official Vetoquinol senior distributor in Manchar & Pune – providing trusted veterinary solutions for livestock & pets.</p>
-        <a href="#products">View Products</a>
+        <a href="products.html">View Products</a>
         <a href="https://wa.me/919975657360" target="_blank">Contact on WhatsApp</a>
     </div>
 </section>
@@ -116,7 +136,7 @@
         <h2>About Our Organization</h2>
         <p><strong>Vetoquinol Senior Distributor – Manchar, Pune, Maharashtra</strong></p>
         <p class="motto"><em>“Achieve More Together”</em></p>
-        <p>We are authorized senior partners of Vetoquinol, a world‑renowned animal health company founded in 1933, delivering high quality veterinary pharmaceutical and wellness products globally. :contentReference[oaicite:2]{index=2}</p>
+        <p>We are authorized senior partners of Vetoquinol, a world‑renowned animal health company founded in 1933, delivering high quality veterinary pharmaceutical and wellness products globally.</p>
         <p><span class="check">✔</span> 5+ years of trusted service &nbsp; <span class="check">✔</span> Licensed distributor &nbsp; <span class="check">✔</span> Genuine Vetoquinol products</p>
     </div>
 </section>
@@ -126,35 +146,30 @@
     <div class="container">
         <h2 style="text-align:center; color:var(--brand-dark); margin-bottom:20px;">Featured Products</h2>
         <div class="products-grid">
-            <!-- Flexadin -->
             <div class="product-card">
                 <img src="https://via.placeholder.com/200x160?text=Flexadin" alt="Flexadin">
                 <h3>Flexadin®</h3>
                 <p>Joint support for dogs & cats</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
-            <!-- Clavaseptin -->
             <div class="product-card">
                 <img src="https://via.placeholder.com/200x160?text=Clavaseptin" alt="Clavaseptin">
                 <h3>Clavaseptin®</h3>
                 <p>Anti‑infective antibiotic</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
-            <!-- Marbocyl -->
             <div class="product-card">
                 <img src="https://via.placeholder.com/200x160?text=Marbocyl" alt="Marbocyl">
                 <h3>Marbocyl®</h3>
                 <p>Broad anti‑infective solution</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
-            <!-- Zylkène -->
             <div class="product-card">
                 <img src="https://via.placeholder.com/200x160?text=Zylkène" alt="Zylkène">
                 <h3>Zylkène®</h3>
                 <p>Stress & behavior support</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
-            <!-- Tolfine -->
             <div class="product-card">
                 <img src="https://via.placeholder.com/200x160?text=Tolfine" alt="Tolfine">
                 <h3>Tolfine®</h3>
