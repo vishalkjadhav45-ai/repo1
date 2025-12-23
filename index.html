@@ -6,55 +6,50 @@
     <title>Vetoquinol Senior Distributor - Manchar, Pune</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Brand colors from Vetoquinol style */
         :root {
             --brand-green: #3C8A43;
             --brand-dark: #2C5F36;
             --brand-light: #f9faf9;
             --brand-accent: #78b74b;
         }
-        * {margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif;}
-        body {background:var(--brand-light); color:#333;}
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif; }
+        body { background:var(--brand-light); color:#333; }
         
         /* Header */
         header {
             background:var(--brand-green);
-            color:#fff; padding:20px 0;
+            color:#fff; padding:18px 0;
         }
-        .container {width:90%; max-width:1200px; margin:0 auto;}
-        <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo" style="height:60px;">
+        .container {width:90%; max-width:1200px; margin:0 auto; display:flex; align-items:center;}
+        .logo {display:flex; align-items:center; gap:15px;}
         .logo img {height:60px;}
         nav {margin-left:auto;}
         nav a {color:#fff; margin-left:18px; text-decoration:none; font-weight:600;}
-        
-        /* Distributor name under title */
+
         .distributor-name {
-            font-size: 1.2rem;
-            margin-top:5px;
+            font-size:1.2rem;
+            margin-top:4px;
             font-weight:500;
             color:#fff;
         }
         
         /* Hero */
-        .hero {
-            background:#fff; text-align:center;
-            padding:70px 20px;
-        }
+        .hero {background:#fff; text-align:center; padding:70px 20px;}
         .hero h1 {font-size:2.5rem; color:var(--brand-green); margin-bottom:15px;}
         .hero p {font-size:1.15rem; margin-bottom:25px;}
         .hero a {
             display:inline-block; margin:8px;
-            padding:12px 26px; background:var(--brand-green);
+            padding:12px 24px; background:var(--brand-green);
             color:#fff; border-radius:5px; text-decoration:none;
             font-weight:600;
         }
-        
+
         /* About */
         .about {padding:50px 0;}
         .about h2 {text-align:center; color:var(--brand-dark); margin-bottom:15px;}
         .about p {text-align:center; margin:0 auto 15px; max-width:800px;}
         .about .check {color:var(--brand-accent); font-weight:700;}
-        
+
         /* Products */
         .products {padding:60px 0; background:#fff;}
         .products-grid {
@@ -77,21 +72,21 @@
             color:#fff; border:none; border-radius:5px;
             cursor:pointer; font-weight:600;
         }
-        
+
         /* CTA */
         .cta {
             background:var(--brand-dark); color:#fff;
             text-align:center; padding:45px 20px;
         }
         .cta p {margin:15px 0;}
-        
+
         /* Footer */
         footer {
             background:#222; color:#fff;
-            text-align:center; padding:24px 16px;
+            text-align:center; padding:22px 14px;
         }
         footer p {margin:6px 0;}
-        
+
         @media(max-width:768px){
             header {flex-direction:column; text-align:center;}
             nav {margin-top:10px;}
@@ -103,9 +98,14 @@
 
 <!-- Header -->
 <header>
-    <div class="container" style="display:flex; align-items:center;">
+    <div class="container">
         <div class="logo">
-            <img src="https://companieslogo.com/img/orig/VETOQUINOL.SA-k0qowY2S.png" alt="Vetoquinol Logo">
+            <!-- Vetoquinol Logo -->
+            <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
+
+            <!-- Distributor Logo (empty for now) -->
+            <!-- <img src="YOUR_DISTRIBUTOR_LOGO_URL" alt="Distributor Logo"> -->
+
             <div>
                 <h1>Vetoquinol Senior Distributor</h1>
                 <div class="motto">Achieve More Together</div>
@@ -147,31 +147,35 @@
         <h2 style="text-align:center; color:var(--brand-dark); margin-bottom:20px;">Featured Products</h2>
         <div class="products-grid">
             <div class="product-card">
-                <img src="https://via.placeholder.com/200x160?text=Flexadin" alt="Flexadin">
+                <img src="https://whiskeepetzone.com/wp-content/uploads/2024/09/Nutrich-Pets-Nutritional-Supplement-For-Dog-and-Cats-1.jpg" alt="Flexadin">
                 <h3>Flexadin®</h3>
                 <p>Joint support for dogs & cats</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
+
             <div class="product-card">
-                <img src="https://via.placeholder.com/200x160?text=Clavaseptin" alt="Clavaseptin">
+                <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin">
                 <h3>Clavaseptin®</h3>
                 <p>Anti‑infective antibiotic</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
+
             <div class="product-card">
-                <img src="https://via.placeholder.com/200x160?text=Marbocyl" alt="Marbocyl">
+                <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl">
                 <h3>Marbocyl®</h3>
                 <p>Broad anti‑infective solution</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
+
             <div class="product-card">
-                <img src="https://via.placeholder.com/200x160?text=Zylkène" alt="Zylkène">
+                <img src="https://pharmapets.imgix.net/media/catalog/product/cache/7fb76a6f9b682723253002988f2e9f80/2/3/23a195c7683b5f05eb84df2df1dc655324a86b92f4d788890672ff9f3d952e90_3.jpeg?auto=format" alt="Zylkène">
                 <h3>Zylkène®</h3>
                 <p>Stress & behavior support</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
             </div>
+
             <div class="product-card">
-                <img src="https://via.placeholder.com/200x160?text=Tolfine" alt="Tolfine">
+                <img src="https://agrimedmalta.com/wp-content/uploads/2018/12/0019805_tolfine-100ml_600.png" alt="Tolfine">
                 <h3>Tolfine®</h3>
                 <p>Pain & inflammation management</p>
                 <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
