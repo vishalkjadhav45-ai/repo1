@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Divine Bharat Travels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+  background:#f4f6f8;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+  padding:40px 20px;
+  text-align:center;
+}
+
+header h1{
+  font-size:40px;
+}
+
+header p{
+  margin-top:10px;
+  font-size:18px;
+}
+
+/* NAV */
+nav{
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:#2c5364;
+}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.section h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+  color:#2c5364;
+}
+
+/* DESTINATIONS */
+.destinations{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 15px rgba(0,0,0,0.12);
+  transition:transform 0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:15px;
+  color:#203a43;
+}
+
+.card p{
+  padding:0 15px 20px;
+  font-size:14px;
+}
+
+/* FORM */
+.form-box{
+  max-width:650px;
+  margin:auto;
+  background:#fff;
+  padding:35px;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.12);
+}
+
+form input, form select, form textarea{
+  width:100%;
+  padding:14px;
+  margin:12px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+form button{
+  width:100%;
+  padding:15px;
+  background:#2c5364;
+  color:#fff;
+  font-size:16px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:#203a43;
+}
+
+/* FOOTER */
+footer{
+  background:#0f2027;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
+
+footer p{
+  margin:6px 0;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header h1{font-size:28px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Divine Bharat Travels</h1>
+  <p>Spiritual & Cultural Journeys Across India</p>
+</header>
+
+<nav>
+  <a href="#places">Destinations</a>
+  <a href="#register">Trip Booking</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="section" id="places">
+<h2>Our Popular Travel Destinations</h2>
+
+<div class="destinations">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Varanasi">
+<h3>Varanasi</h3>
+<p>The spiritual heart of India, famous for Ganga Aarti and ancient ghats.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606203079419-98e5a7e4b1c5" alt="Ayodhya">
+<h3>Ayodhya</h3>
+<p>The sacred birthplace of Lord Ram, rich in devotion and heritage.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1623486204440-8f6f2c77f56d" alt="Prayagraj">
+<h3>Prayagraj</h3>
+<p>Home of Triveni Sangam and the world-famous Kumbh Mela.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1621768216002-5ac171876625" alt="Mathura Vrindavan Barsana">
+<h3>Mathura – Vrindavan – Barsana</h3>
+<p>The divine land of Lord Krishna’s birth and childhood.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604147706284-4c3d3b17e9c4" alt="Kedarnath Tungnath">
+<h3>Kedarnath & Tungnath</h3>
+<p>Sacred Himalayan temples offering peace, devotion, and adventure.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1623078277418-4bcb35c50a4c" alt="Char Dham">
+<h3>Char Dham Yatra</h3>
+<p>Yamunotri, Gangotri, Kedarnath & Badrinath – the ultimate pilgrimage.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="register">
+<h2>Register Your Trip Package</h2>
+
+<div class="form-box">
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Mobile Number" required>
+<input type="email" placeholder="Email Address" required>
+
+<select required>
+<option value="">Select Destination</option>
+<option>Varanasi</option>
+<option>Ayodhya</option>
+<option>Prayagraj</option>
+<option>Mathura - Vrindavan - Barsana</option>
+<option>Kedarnath - Tungnath</option>
+<option>Char Dham Yatra</option>
+</select>
+
+<textarea rows="4" placeholder="Additional Information"></textarea>
+
+<button type="submit">Submit Booking Request</button>
+</form>
+</div>
+</section>
+
+<footer id="contact">
+<p><strong>Owned & Managed By</strong></p>
+<p>Vishal Jadhav</p>
+<p>📞 Contact: 9156527210</p>
+<p>© 2025 Divine Bharat Travels. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+
