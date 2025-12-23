@@ -1,252 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Divine Bharat Travels</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-body{
-  background:#f4f6f8;
-  color:#333;
-}
-
-/* HEADER */
-header{
-  background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
-  color:#fff;
-  padding:40px 20px;
-  text-align:center;
-}
-
-header h1{
-  font-size:40px;
-}
-
-header p{
-  margin-top:10px;
-  font-size:18px;
-}
-
-/* NAV */
-nav{
-  background:#fff;
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:15px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-  position:sticky;
-  top:0;
-  z-index:1000;
-}
-
-nav a{
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
-}
-
-nav a:hover{
-  color:#2c5364;
-}
-
-/* SECTION */
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-.section h2{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:40px;
-  color:#2c5364;
-}
-
-/* DESTINATIONS */
-.destinations{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
-
-.card{
-  background:#fff;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 6px 15px rgba(0,0,0,0.12);
-  transition:transform 0.3s;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-}
-
-.card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-.card h3{
-  padding:15px;
-  color:#203a43;
-}
-
-.card p{
-  padding:0 15px 20px;
-  font-size:14px;
-}
-
-/* FORM */
-.form-box{
-  max-width:650px;
-  margin:auto;
-  background:#fff;
-  padding:35px;
-  border-radius:12px;
-  box-shadow:0 6px 15px rgba(0,0,0,0.12);
-}
-
-form input, form select, form textarea{
-  width:100%;
-  padding:14px;
-  margin:12px 0;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
-
-form button{
-  width:100%;
-  padding:15px;
-  background:#2c5364;
-  color:#fff;
-  font-size:16px;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-form button:hover{
-  background:#203a43;
-}
-
-/* FOOTER */
-footer{
-  background:#0f2027;
-  color:#fff;
-  text-align:center;
-  padding:30px 20px;
-}
-
-footer p{
-  margin:6px 0;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  header h1{font-size:28px;}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetoquinol Senior Distributor - Manchar, Pune</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box; font-family: 'Roboto', sans-serif;}
+        body {line-height:1.6; color:#333;}
+        header {background:#0d6efd; color:#fff; padding:20px 0;}
+        .container {width:90%; max-width:1200px; margin:0 auto;}
+        header .logo {display:flex; align-items:center; gap:15px;}
+        header .logo img {height:50px;}
+        nav {float:right;}
+        nav a {color:#fff; margin-left:20px; text-decoration:none; font-weight:500;}
+        .hero {background:#f1f5f9; padding:80px 0; text-align:center;}
+        .hero h1 {font-size:2.5rem; margin-bottom:20px; color:#0d6efd;}
+        .hero p {font-size:1.2rem; margin-bottom:30px;}
+        .hero a {display:inline-block; margin:5px 10px; padding:12px 25px; background:#0d6efd; color:#fff; text-decoration:none; border-radius:5px; font-weight:500;}
+        .about, .products, .cta {padding:60px 0;}
+        .about h2, .products h2, .cta h2 {text-align:center; margin-bottom:30px; color:#0d6efd;}
+        .about p {max-width:800px; margin:0 auto 20px; text-align:center;}
+        .about .motto {font-style:italic; font-weight:700; color:#555; margin-bottom:20px;}
+        .products-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; max-width:1200px; margin:0 auto;}
+        .product-card {border:1px solid #ddd; border-radius:8px; padding:20px; text-align:center; background:#fff;}
+        .product-card h3 {margin-bottom:10px; color:#0d6efd;}
+        .product-card p {margin-bottom:10px;}
+        .product-card button {padding:10px 20px; background:#0d6efd; color:#fff; border:none; border-radius:5px; cursor:pointer;}
+        .cta {background:#0d6efd; color:#fff; text-align:center;}
+        .cta p {margin:20px 0; font-size:1.2rem;}
+        footer {background:#333; color:#fff; text-align:center; padding:30px 20px;}
+        footer p {margin:5px 0;}
+        @media(max-width:768px){header {text-align:center;} nav {float:none; margin-top:10px;} nav a{margin-left:10px; margin-right:10px;}}
+    </style>
 </head>
-
 <body>
 
+<!-- Header -->
 <header>
-  <h1>Divine Bharat Travels</h1>
-  <p>Spiritual & Cultural Journeys Across India</p>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+        <div class="logo">
+            <img src="https://www.vetoquinol.com/sites/default/files/logo-vetoquinol.png" alt="Vetoquinol Logo">
+            <div>
+                <h1>Vetoquinol Senior Distributor</h1>
+                <div class="motto">Achieve More Together</div>
+            </div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<nav>
-  <a href="#places">Destinations</a>
-  <a href="#register">Trip Booking</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section class="section" id="places">
-<h2>Our Popular Travel Destinations</h2>
-
-<div class="destinations">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Varanasi">
-<h3>Varanasi</h3>
-<p>The spiritual heart of India, famous for Ganga Aarti and ancient ghats.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1606203079419-98e5a7e4b1c5" alt="Ayodhya">
-<h3>Ayodhya</h3>
-<p>The sacred birthplace of Lord Ram, rich in devotion and heritage.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1623486204440-8f6f2c77f56d" alt="Prayagraj">
-<h3>Prayagraj</h3>
-<p>Home of Triveni Sangam and the world-famous Kumbh Mela.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1621768216002-5ac171876625" alt="Mathura Vrindavan Barsana">
-<h3>Mathura – Vrindavan – Barsana</h3>
-<p>The divine land of Lord Krishna’s birth and childhood.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1604147706284-4c3d3b17e9c4" alt="Kedarnath Tungnath">
-<h3>Kedarnath & Tungnath</h3>
-<p>Sacred Himalayan temples offering peace, devotion, and adventure.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1623078277418-4bcb35c50a4c" alt="Char Dham">
-<h3>Char Dham Yatra</h3>
-<p>Yamunotri, Gangotri, Kedarnath & Badrinath – the ultimate pilgrimage.</p>
-</div>
-
-</div>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>Premium Animal Health Distribution in Maharashtra</h1>
+        <p>Delivering trusted Vetoquinol veterinary solutions for pets and livestock — empowering animal well-being in Manchar & Pune.</p>
+        <a href="#">View Products</a>
+        <a href="https://wa.me/919975657360" target="_blank">Contact on WhatsApp</a>
+    </div>
 </section>
 
-<section class="section" id="register">
-<h2>Register Your Trip Package</h2>
-
-<div class="form-box">
-<form>
-<input type="text" placeholder="Full Name" required>
-<input type="tel" placeholder="Mobile Number" required>
-<input type="email" placeholder="Email Address" required>
-
-<select required>
-<option value="">Select Destination</option>
-<option>Varanasi</option>
-<option>Ayodhya</option>
-<option>Prayagraj</option>
-<option>Mathura - Vrindavan - Barsana</option>
-<option>Kedarnath - Tungnath</option>
-<option>Char Dham Yatra</option>
-</select>
-
-<textarea rows="4" placeholder="Additional Information"></textarea>
-
-<button type="submit">Submit Booking Request</button>
-</form>
-</div>
+<!-- About Section -->
+<section class="about">
+    <div class="container">
+        <h2>About Our Organization</h2>
+        <p>Based in Manchar, Pune, Maharashtra, we are an authorized senior distributor of Vetoquinol — a globally recognized animal health company with decades of expertise in veterinary medicines and wellness products.</p>
+        <p>✔ 5+ years of trusted service<br>✔ Licensed distributor<br>✔ Genuine Vetoquinol products</p>
+    </div>
 </section>
 
-<footer id="contact">
-<p><strong>Owned & Managed By</strong></p>
-<p>Vishal Jadhav</p>
-<p>📞 Contact: 9156527210</p>
-<p>© 2025 Divine Bharat Travels. All Rights Reserved.</p>
+<!-- Products Section -->
+<section class="products">
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <h3>Flexadin®</h3>
+                <p>Dogs & Cats</p>
+                <p>Joint support & mobility supplement</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Clavaseptin®</h3>
+                <p>Dogs & Cats</p>
+                <p>Anti-infective antibiotic</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Marbocyl®</h3>
+                <p>All Animals</p>
+                <p>Broad anti-infective solution</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Zylkène®</h3>
+                <p>Dogs & Cats</p>
+                <p>Stress & behavior support</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+            <div class="product-card">
+                <h3>Tolfine® (Tolfedine®)</h3>
+                <p>All Animals</p>
+                <p>Pain & inflammation management</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta">
+    <div class="container">
+        <h2>Need Animal Medicines?</h2>
+        <p>Contact our partner now for orders or product information.</p>
+        <p>📞 Call: +91 99756-57360 | 💬 WhatsApp: <a href="https://wa.me/919975657360" style="color:#fff; text-decoration:underline;">+91 99756-57360</a></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Address: At Post Pune, Manchar, Maharashtra, India</p>
+    <p>Phone / WhatsApp: +91 99756-57360</p>
+    <p>Licensed distributor of Vetoquinol veterinary products</p>
 </footer>
 
 </body>
