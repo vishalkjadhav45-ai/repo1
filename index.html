@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vetoquinol Senior Distributor - Manchar, Pune</title>
+    <meta name="description" content="Official Vetoquinol senior distributor in Manchar & Pune offering high-quality veterinary products and solutions for pets and livestock.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,85 +13,208 @@
             --brand-light: #f9faf9;
             --brand-accent: #78b74b;
         }
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto',sans-serif; }
-        body { background:var(--brand-light); color:#333; }
-        
+
+        * {
+            margin:0; padding:0; box-sizing:border-box;
+            font-family:'Roboto',sans-serif;
+        }
+
+        body {
+            background: var(--brand-light);
+            color: #333;
+        }
+
         /* Header */
         header {
-            background:var(--brand-green);
-            color:#fff; padding:18px 0;
+            background: var(--brand-green);
+            color: #fff;
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
-        .container {width:90%; max-width:1200px; margin:0 auto; display:flex; align-items:center;}
-        .logo {display:flex; align-items:center; gap:15px;}
-        .logo img {height:60px;}
-        nav {margin-left:auto;}
-        nav a {color:#fff; margin-left:18px; text-decoration:none; font-weight:600;}
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img { height: 60px; }
+
+        nav { margin-left: auto; }
+
+        nav a {
+            color: #fff;
+            margin-left: 18px;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
         .distributor-name {
-            font-size:1.2rem;
-            margin-top:4px;
-            font-weight:500;
-            color:#fff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fff;
         }
-        
+
         /* Hero */
-        .hero {background:#fff; text-align:center; padding:70px 20px;}
-        .hero h1 {font-size:2.5rem; color:var(--brand-green); margin-bottom:15px;}
-        .hero p {font-size:1.15rem; margin-bottom:25px;}
-        .hero a {
-            display:inline-block; margin:8px;
-            padding:12px 24px; background:var(--brand-green);
-            color:#fff; border-radius:5px; text-decoration:none;
-            font-weight:600;
+        .hero {
+            background: #fff;
+            text-align: center;
+            padding: 70px 20px;
         }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--brand-green);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+        }
+
+        .hero a {
+            display: inline-block;
+            margin: 8px;
+            padding: 12px 24px;
+            background: var(--brand-green);
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .hero a:hover { background: var(--brand-accent); }
 
         /* About */
-        .about {padding:50px 0;}
-        .about h2 {text-align:center; color:var(--brand-dark); margin-bottom:15px;}
-        .about p {text-align:center; margin:0 auto 15px; max-width:800px;}
-        .about .check {color:var(--brand-accent); font-weight:700;}
+        .about {
+            padding: 50px 0;
+        }
+
+        .about h2 {
+            text-align: center;
+            color: var(--brand-dark);
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            text-align: center;
+            margin: 0 auto 15px;
+            max-width: 800px;
+        }
+
+        .about .check {
+            color: var(--brand-accent);
+            font-weight: 700;
+        }
 
         /* Products */
-        .products {padding:60px 0; background:#fff;}
+        .products {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .products h2 {
+            text-align: center;
+            color: var(--brand-dark);
+            margin-bottom: 20px;
+        }
+
         .products-grid {
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-            gap:25px;
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scroll-behavior: smooth;
         }
+
+        .products-grid::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .products-grid::-webkit-scrollbar-thumb {
+            background-color: var(--brand-green);
+            border-radius: 4px;
+        }
+
         .product-card {
-            border:1px solid #ddd; border-radius:8px;
-            background:#fff; padding:18px; text-align:center;
+            flex: 0 0 220px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            padding: 18px;
+            text-align: center;
         }
+
         .product-card img {
-            width:100%; height:160px; object-fit:contain;
-            margin-bottom:10px;
+            width: 100%;
+            height: 160px;
+            object-fit: contain;
+            margin-bottom: 10px;
         }
-        .product-card h3 {color:var(--brand-dark); margin-bottom:8px;}
-        .product-card p {margin-bottom:10px;color:#555;}
+
+        .product-card h3 {
+            color: var(--brand-dark);
+            margin-bottom: 6px;
+        }
+
+        .product-card p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
         .product-card button {
-            padding:10px 18px; background:var(--brand-green);
-            color:#fff; border:none; border-radius:5px;
-            cursor:pointer; font-weight:600;
+            padding: 10px 18px;
+            background: var(--brand-green);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .product-card button:hover {
+            background: var(--brand-accent);
         }
 
         /* CTA */
         .cta {
-            background:var(--brand-dark); color:#fff;
-            text-align:center; padding:45px 20px;
+            background: var(--brand-dark);
+            color: #fff;
+            text-align: center;
+            padding: 45px 20px;
         }
-        .cta p {margin:15px 0;}
+
+        .cta p { margin: 15px 0; }
 
         /* Footer */
         footer {
-            background:#222; color:#fff;
-            text-align:center; padding:22px 14px;
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 22px 14px;
         }
-        footer p {margin:6px 0;}
 
+        footer p { margin: 6px 0; }
+
+        /* Responsive */
         @media(max-width:768px){
-            header {flex-direction:column; text-align:center;}
-            nav {margin-top:10px;}
-            nav a{margin-left:10px; margin-right:10px;}
+            header { flex-direction: column; text-align: center; }
+            nav { margin-top: 10px; }
+            nav a { margin: 8px; }
         }
     </style>
 </head>
@@ -100,12 +224,7 @@
 <header>
     <div class="container">
         <div class="logo">
-            <!-- Vetoquinol Logo -->
             <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
-
-            <!-- Distributor Logo (empty for now) -->
-            <!-- <img src="YOUR_DISTRIBUTOR_LOGO_URL" alt="Distributor Logo"> -->
-
             <div>
                 <h1>Vetoquinol Senior Distributor</h1>
                 <div class="motto">Achieve More Together</div>
@@ -144,41 +263,41 @@
 <!-- Products -->
 <section class="products" id="products">
     <div class="container">
-        <h2 style="text-align:center; color:var(--brand-dark); margin-bottom:20px;">Featured Products</h2>
+        <h2>Featured Products</h2>
         <div class="products-grid">
             <div class="product-card">
-                <img src="https://whiskeepetzone.com/wp-content/uploads/2024/09/Nutrich-Pets-Nutritional-Supplement-For-Dog-and-Cats-1.jpg" alt="Flexadin">
+                <img src="https://whiskeepetzone.com/wp-content/uploads/2024/09/Nutrich-Pets-Nutritional-Supplement-For-Dog-and-Cats-1.jpg" alt="Flexadin® Joint Support for Dogs and Cats">
                 <h3>Flexadin®</h3>
                 <p>Joint support for dogs & cats</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+                <button onclick="window.location.href='https://wa.me/919975657360'" aria-label="Order Flexadin via WhatsApp">Order Now</button>
             </div>
 
             <div class="product-card">
-                <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin">
+                <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin® Anti-infective antibiotic">
                 <h3>Clavaseptin®</h3>
                 <p>Anti‑infective antibiotic</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+                <button onclick="window.location.href='https://wa.me/919975657360'" aria-label="Order Clavaseptin via WhatsApp">Order Now</button>
             </div>
 
             <div class="product-card">
-                <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl">
+                <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl® Broad anti-infective solution">
                 <h3>Marbocyl®</h3>
                 <p>Broad anti‑infective solution</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+                <button onclick="window.location.href='https://wa.me/919975657360'" aria-label="Order Marbocyl via WhatsApp">Order Now</button>
             </div>
 
             <div class="product-card">
-                <img src="https://pharmapets.imgix.net/media/catalog/product/cache/7fb76a6f9b682723253002988f2e9f80/2/3/23a195c7683b5f05eb84df2df1dc655324a86b92f4d788890672ff9f3d952e90_3.jpeg?auto=format" alt="Zylkène">
+                <img src="https://pharmapets.imgix.net/media/catalog/product/cache/7fb76a6f9b682723253002988f2e9f80/2/3/23a195c7683b5f05eb84df2df1dc655324a86b92f4d788890672ff9f3d952e90_3.jpeg?auto=format" alt="Zylkène® Stress and behavior support">
                 <h3>Zylkène®</h3>
                 <p>Stress & behavior support</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+                <button onclick="window.location.href='https://wa.me/919975657360'" aria-label="Order Zylkène via WhatsApp">Order Now</button>
             </div>
 
             <div class="product-card">
-                <img src="https://agrimedmalta.com/wp-content/uploads/2018/12/0019805_tolfine-100ml_600.png" alt="Tolfine">
+                <img src="https://agrimedmalta.com/wp-content/uploads/2018/12/0019805_tolfine-100ml_600.png" alt="Tolfine® Pain and inflammation management">
                 <h3>Tolfine®</h3>
                 <p>Pain & inflammation management</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+                <button onclick="window.location.href='https://wa.me/919975657360'" aria-label="Order Tolfine via WhatsApp">Order Now</button>
             </div>
         </div>
     </div>
