@@ -4,229 +4,116 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vetoquinol Senior Distributor</title>
-<meta name="description" content="Explore high-quality veterinary products from Vetoquinol for pets and livestock.">
+<meta name="description" content="Authorized senior distributor of Vetoquinol products for pets and livestock in Pune & Manchar.">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-    :root {
-        --brand-green: #3C8A43;
-        --brand-dark: #2C5F36;
-        --brand-light: #f9faf9;
-        --brand-accent: #78b74b;
-        --transition-speed: 0.3s;
-    }
+:root {
+    --brand-green: #3C8A43;
+    --brand-dark: #2C5F36;
+    --brand-light: #f9faf9;
+    --brand-accent: #78b74b;
+    --transition-speed: 0.3s;
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
-    }
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
 
-    body {
-        background: var(--brand-light);
-        color: #333;
-    }
+body { background: var(--brand-light); color:#333; }
 
-    /* Header */
-    header {
-        background: var(--brand-green);
-        color: #fff;
-        padding: 18px 0;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }
+header { background: var(--brand-green); color:#fff; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+header .logo { display:flex; align-items:center; gap:10px; }
+header .logo img { height:60px; }
+header nav a { color:#fff; margin-left:15px; text-decoration:none; font-weight:600; }
+header nav a:hover { text-decoration:underline; }
 
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+/* Mobile menu */
+.mobile-menu { display:none; font-size:24px; cursor:pointer; }
+nav { display:flex; gap:10px; }
 
-    .logo img { height: 60px; }
-    nav { margin-left: auto; }
-    nav a {
-        color: #fff;
-        margin-left: 18px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color var(--transition-speed);
-    }
-    nav a:hover { color: var(--brand-accent); }
+@media(max-width:768px){
+    nav { display:none; flex-direction:column; width:100%; margin-top:10px; background:#3C8A43; padding:10px; border-radius:8px; }
+    nav.show { display:flex; }
+    .mobile-menu { display:block; }
+}
 
-    /* Hero Section */
-    .hero {
-        background: var(--brand-green);
-        color: #fff;
-        text-align: center;
-        padding: 60px 20px;
-    }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
-    .hero p { font-size: 1.2rem; }
+/* Hero Section */
+.hero { padding:60px 20px; text-align:center; background:var(--brand-green); color:#fff; }
+.hero h1 { font-size:2rem; margin-bottom:15px; }
+.hero p { font-size:1.2rem; }
 
-    /* Carousel Section */
-    .products-section { padding: 50px 20px; }
-    .products-section h2 {
-        text-align: center;
-        color: var(--brand-dark);
-        margin-bottom: 40px;
-    }
+/* Featured Products */
+.featured-section { padding:40px 20px; max-width:1200px; margin:0 auto; }
+.featured-section h2 { text-align:center; margin-bottom:30px; color:var(--brand-dark); }
 
-    .carousel-container {
-        position: relative;
-        overflow: hidden;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.product-carousel { display:flex; overflow-x:auto; gap:20px; scroll-behavior:smooth; }
+.product-card { min-width:250px; background:#fff; border-radius:10px; padding:20px; text-align:center; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s; }
+.product-card:hover { transform:translateY(-5px); box-shadow:0 8px 12px rgba(0,0,0,0.2); }
+.product-card img { width:100%; height:180px; object-fit:contain; margin-bottom:10px; }
+.product-card h3 { color:var(--brand-dark); font-size:1.1rem; margin-bottom:8px; }
+.product-card p { color:#555; margin-bottom:10px; }
+.product-card button { padding:8px 16px; background:var(--brand-green); color:#fff; border:none; border-radius:5px; cursor:pointer; transition:background 0.3s; }
+.product-card button:hover { background:var(--brand-accent); }
 
-    .carousel-track {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .product-card {
-        background: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        min-width: 300px;
-        margin: 0 10px;
-        flex-shrink: 0;
-    }
-
-    .product-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: contain;
-        margin-bottom: 15px;
-    }
-
-    .product-card h3 {
-        color: var(--brand-dark);
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-    }
-
-    .product-card p {
-        color: #555;
-        margin-bottom: 15px;
-        font-size: 1rem;
-    }
-
-    .product-card button {
-        padding: 10px 20px;
-        background: var(--brand-green);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: background var(--transition-speed);
-    }
-
-    .product-card button:hover { background: var(--brand-accent); }
-
-    /* Dots */
-    .dots {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .dot {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        margin: 0 5px;
-        background: #ccc;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-    .dot.active { background: var(--brand-green); }
-
-    /* Footer */
-    footer {
-        background: #222;
-        color: #fff;
-        text-align: center;
-        padding: 22px 14px;
-        margin-top: 40px;
-    }
-    footer p { margin: 6px 0; }
-
-    /* Responsive */
-    @media(max-width:768px){
-        .hero h1 { font-size: 2rem; }
-        .product-card { min-width: 250px; margin: 0 5px; }
-    }
+/* Footer */
+footer { background:#222; color:#fff; text-align:center; padding:22px 14px; margin-top:40px; }
+footer p { margin:6px 0; }
 </style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
-    <div class="container">
-        <div class="logo">
-            <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
+    <div class="logo">
+        <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
+        <div>
+            <h1>Vetoquinol Senior Distributor</h1>
+            <div>Partner: <strong>Mr. Pavan K Jadhav</strong></div>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="profile.html">Profile</a>
-            <a href="contact.html">Contact</a>
-        </nav>
     </div>
+    <div class="mobile-menu" onclick="toggleMenu()">&#x22EE;</div>
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="profile.html">Profile</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
 <!-- Hero Section -->
 <section class="hero">
-    <h1>Welcome to Vetoquinol Senior Distributor</h1>
-    <p>Providing high-quality veterinary products for pets and livestock in Pune & Manchar</p>
+    <h1>Providing Genuine Vetoquinol Products</h1>
+    <p>High-quality veterinary solutions for pets and livestock in Pune & Manchar.</p>
 </section>
 
-<!-- Carousel Products -->
-<section class="products-section">
+<!-- Featured Products -->
+<section class="featured-section">
     <h2>Featured Products</h2>
-    <div class="carousel-container">
-        <div class="carousel-track">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin® Plus">
-                <h3>Flexadin® Plus</h3>
-                <p>Supports joint health for dogs & cats.</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin®">
-                <h3>Clavaseptin®</h3>
-                <p>Anti-infective antibiotic for pets.</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl®">
-                <h3>Marbocyl®</h3>
-                <p>Broad anti-infective solution for pets.</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine®">
-                <h3>Tolfine®</h3>
-                <p>Pain and inflammation management for pets.</p>
-                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-            </div>
+    <div class="product-carousel">
+        <div class="product-card">
+            <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin Plus">
+            <h3>Flexadin® Plus Joint Support</h3>
+            <p>Supports joint health and mobility for pets.</p>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
         </div>
-        <div class="dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
+
+        <div class="product-card">
+            <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin">
+            <h3>Clavaseptin® Anti-infective</h3>
+            <p>Effective antibiotic for pets against infections.</p>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl">
+            <h3>Marbocyl® Broad Anti-infective</h3>
+            <p>Treats a wide range of bacterial infections in pets.</p>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine">
+            <h3>Tolfine® Pain & Inflammation</h3>
+            <p>Relieves pain and inflammation in pets.</p>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
         </div>
     </div>
 </section>
@@ -239,30 +126,10 @@
 </footer>
 
 <script>
-const track = document.querySelector('.carousel-track');
-const dots = document.querySelectorAll('.dot');
-const productCount = document.querySelectorAll('.product-card').length;
-let currentIndex = 0;
-
-// Move carousel to selected index
-function moveTo(index){
-    const cardWidth = document.querySelector('.product-card').offsetWidth + 20; // margin included
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-    currentIndex = index;
+function toggleMenu(){
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('show');
 }
-
-// Dot click
-dots.forEach(dot => {
-    dot.addEventListener('click', () => moveTo(Number(dot.dataset.index)));
-});
-
-// Optional: Auto-slide every 5s
-// setInterval(() => {
-//     let nextIndex = (currentIndex + 1) % productCount;
-//     moveTo(nextIndex);
-// }, 5000);
 </script>
 
 </body>
