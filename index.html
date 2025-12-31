@@ -1,214 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vetoquinol Senior Distributor</title>
-<meta name="description" content="Explore high-quality veterinary products from Vetoquinol for pets and livestock, distributed by Mr. Pavan K Jadhav.">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --brand-green: #3C8A43;
-  --brand-dark: #2C5F36;
-  --brand-light: #f9faf9;
-  --brand-accent: #78b74b;
-  --transition-speed: 0.3s;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetoquinol Senior Distributor</title>
+    <meta name="description" content="Vetoquinol senior distributor in Pune & Manchar - Featured veterinary products for pets and livestock.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-green: #3C8A43;
+            --brand-dark: #2C5F36;
+            --brand-light: #f9faf9;
+            --brand-accent: #78b74b;
+            --transition-speed: 0.3s;
+        }
 
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
 
-body { background: var(--brand-light); color: #333; }
+        body { background: var(--brand-light); color: #333; }
 
-header {
-  background: var(--brand-green);
-  color: #fff;
-  padding: 18px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+        /* Header */
+        header {
+            background: var(--brand-green);
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+        /* Intro Section */
+        .intro {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .intro h2 { color: var(--brand-dark); font-size: 1.8rem; margin-bottom: 10px; }
+        .intro p { color: #555; font-size: 1.1rem; max-width: 800px; margin: 0 auto; line-height: 1.6; }
 
-.logo img { height: 60px; }
+        /* Featured Products */
+        .featured-section {
+            padding: 30px 20px;
+        }
+        .featured-section h3 {
+            text-align: center;
+            color: var(--brand-dark);
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
 
-.logo div h1 { font-size: 1.5rem; margin-bottom: 5px; }
-.logo div p { font-size: 0.95rem; margin:2px 0; }
+        .featured-products {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
 
-nav a {
-  color: #fff;
-  margin-left: 18px;
-  text-decoration: none;
-  font-weight: 600;
-}
+        .product-card {
+            min-width: 250px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
 
-nav a:hover { text-decoration: underline; }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
 
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
+        .product-card img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
 
-nav.mobile {
-  display: none;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 10px;
-}
+        .product-card h4 {
+            color: var(--brand-dark);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
 
-.product-section {
-  padding: 50px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
+        .product-card button {
+            padding: 10px 20px;
+            background: var(--brand-green);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background var(--transition-speed);
+        }
 
-.product-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-}
+        .product-card button:hover { background: var(--brand-accent); }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-}
+        /* View All Products Button */
+        .view-all {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .view-all a {
+            padding: 12px 28px;
+            background: var(--brand-green);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .view-all a:hover { background: var(--brand-accent); }
 
-.product-card img { width: 100%; height: auto; object-fit: contain; margin-bottom: 12px; }
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 22px 14px;
+        }
+        footer p { margin: 6px 0; }
 
-.product-card h3 { color: var(--brand-dark); margin-bottom: 10px; font-size: 1.3rem; }
-.product-card p { color: #555; margin-bottom: 12px; font-size: 1rem; }
+        /* Scrollbar hide for horizontal scroll */
+        .featured-products::-webkit-scrollbar { display: none; }
+        .featured-products { -ms-overflow-style: none; scrollbar-width: none; }
 
-.product-card button {
-  padding: 10px 20px;
-  background: var(--brand-green);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background var(--transition-speed);
-}
-
-.product-card button:hover { background: var(--brand-accent); }
-
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 22px 14px;
-}
-
-footer p { margin: 6px 0; }
-
-/* Responsive */
-@media(max-width:768px){
-  .menu-toggle { display:block; }
-  nav.desktop { display:none; }
-  nav.mobile { display:flex; }
-}
-</style>
+        /* Responsive */
+        @media(max-width:768px) {
+            .intro h2 { font-size: 1.5rem; }
+            .featured-products { gap: 15px; }
+            .product-card { min-width: 200px; }
+        }
+    </style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
-  <div class="logo">
-    <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
-    <div>
-      <h1>Vetoquinol Senior Distributor</h1>
-      <p class="motto">Achieve More Together</p>
-      <p class="distributor-name">Partner: <strong>Mr. Pavan K Jadhav</strong></p>
-    </div>
-  </div>
-  <nav class="desktop">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="profile.html">Profile</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <div class="menu-toggle" onclick="toggleMobileMenu()">☰</div>
-  <nav class="mobile" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="profile.html">Profile</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <h1>Vetoquinol Senior Distributor</h1>
+    <p>Partner: <strong>Mr. Pavan K Jadhav</strong></p>
 </header>
 
-<!-- Product Section -->
-<section class="product-section">
-  <div class="product-card">
-    <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin® Plus Joint Support">
-    <h3>Flexadin® Plus Joint Support</h3>
-    <p>Supports joint health and mobility for pets.</p>
-    <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-  </div>
+<!-- Intro Section -->
+<section class="intro">
+    <h2>Welcome to our Veterinary Solutions</h2>
+    <p>We are authorized senior distributors of Vetoquinol in Pune & Manchar, providing high-quality veterinary solutions for pets and livestock. Explore our featured products below.</p>
+</section>
 
-  <div class="product-card">
-    <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin® Anti-infective Antibiotic">
-    <h3>Clavaseptin® Anti-infective</h3>
-    <p>Anti-infective antibiotic for pets, effective against various bacteria.</p>
-    <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-  </div>
-
-  <div class="product-card">
-    <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl® Broad Anti-infective Solution">
-    <h3>Marbocyl® Broad Anti-infective</h3>
-    <p>Treats a wide range of bacterial infections in pets.</p>
-    <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-  </div>
-
-  <div class="product-card">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine® Pain Management">
-    <h3>Tolfine® Pain & Inflammation</h3>
-    <p>Relieves pain and inflammation in pets.</p>
-    <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-  </div>
-
-  <div class="product-card">
-    <img src="https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/2023-08/Mix%20Aluspray%201.jpg?itok=q2SpPkY9" alt="Aluspray® Wound Care">
-    <h3>Aluspray® Wound Care</h3>
-    <p>Protects and promotes healing of wounds in pets.</p>
-    <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-  </div>
-
-  <div class="product-card">
-    <img src="https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/2023-08/Mix%20Aluspray%201.jpg?itok=q2SpPkY9" alt="Cystaid® Urinary Support">
-    <h3>Cystaid® Urinary Support</h3>
-    <p>Supports urinary health for cats and dogs prone to urinary issues.</p>
-    <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
-  </div>
+<!-- Featured Products Section -->
+<section class="featured-section">
+    <h3>Featured Products</h3>
+    <div class="featured-products">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin Plus">
+            <h4>Flexadin® Plus Joint Support</h4>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin">
+            <h4>Clavaseptin® Anti-infective</h4>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl">
+            <h4>Marbocyl® Broad Anti-infective</h4>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+        </div>
+    </div>
+    <div class="view-all">
+        <a href="products.html">View All Products</a>
+    </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>Address: At Post Pune, Manchar, Maharashtra, India</p>
-  <p>Phone / WhatsApp: +91 99756‑57360</p>
-  <p>Licensed distributor of genuine Vetoquinol products</p>
+    <p>Address: At Post Pune, Manchar, Maharashtra, India</p>
+    <p>Phone / WhatsApp: +91 99756‑57360</p>
+    <p>Licensed distributor of genuine Vetoquinol products</p>
 </footer>
-
-<script>
-function toggleMobileMenu(){
-  const menu = document.getElementById('mobileMenu');
-  if(menu.style.display === 'flex'){ menu.style.display = 'none'; }
-  else{ menu.style.display = 'flex'; }
-}
-</script>
 
 </body>
 </html>
