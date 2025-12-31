@@ -1,204 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vetoquinol Products</title>
-    <meta name="description" content="Explore high-quality veterinary products from Vetoquinol for pets and livestock, now available for order.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-green: #3C8A43;
-            --brand-dark: #2C5F36;
-            --brand-light: #f9faf9;
-            --brand-accent: #78b74b;
-            --transition-speed: 0.3s;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Vetoquinol</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --brand-green: #3C8A43;
+    --brand-dark: #2C5F36;
+    --brand-light: #f9faf9;
+    --brand-accent: #78b74b;
+    --transition-speed: 0.3s;
+}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+body { background: var(--brand-light); color: #333; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
+/* Header */
+header {
+    background: var(--brand-green);
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 50px; }
+.distributor-name { display: flex; flex-direction: column; font-size: 0.95rem; }
+nav { display: flex; gap: 15px; margin-left: auto; }
+nav a { color: #fff; text-decoration: none; font-weight: 600; }
+nav a:hover { text-decoration: underline; }
+@media(max-width:768px){ 
+    nav { flex-direction: column; align-items: center; gap: 10px; margin-top: 10px; width: 100%; } 
+}
 
-        body {
-            background: var(--brand-light);
-            color: #333;
-        }
+/* Product Section */
+.product-section { 
+    padding: 40px 20px; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); 
+    gap: 25px; 
+}
+.product-card { 
+    background: #fff; 
+    border-radius: 10px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.product-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+.product-card img { width:100%; height:auto; margin-bottom:10px; object-fit:contain; }
+.product-card h3 { color: var(--brand-dark); margin-bottom:8px; font-size:1.2rem; }
+.product-card p { color:#555; margin-bottom:12px; font-size:1rem; }
+.product-card button { 
+    padding:10px 20px; 
+    background: var(--brand-green); 
+    color:#fff; 
+    border:none; 
+    border-radius:5px; 
+    cursor:pointer; 
+    font-weight:600; 
+    transition:background var(--transition-speed);
+}
+.product-card button:hover { background: var(--brand-accent); }
 
-        /* Header */
-        header {
-            background: var(--brand-green);
-            color: #fff;
-            padding: 18px 0;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .logo img {
-            height: 60px;
-        }
-        .logo-info {
-            display: flex;
-            flex-direction: column;
-        }
-        .logo-info h1 {
-            font-size: 1.2rem;
-        }
-        .logo-info .motto {
-            font-size: 0.85rem;
-            font-style: italic;
-            color: var(--brand-accent);
-        }
-        .logo-info .distributor-name {
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        nav {
-            margin-left: auto;
-        }
-
-        nav a {
-            color: #fff;
-            margin-left: 18px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Products Section */
-        .product-section {
-            padding: 50px 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .product-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-
-        .product-card h3 {
-            color: var(--brand-dark);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .product-card p {
-            color: #555;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-
-        .product-card button {
-            padding: 10px 20px;
-            background: var(--brand-green);
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background var(--transition-speed);
-        }
-
-        .product-card button:hover {
-            background: var(--brand-accent);
-        }
-
-        /* Footer */
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 22px 14px;
-        }
-
-        footer p {
-            margin: 6px 0;
-        }
-
-        /* Responsive Mobile Dropdown */
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            margin-left: auto;
-        }
-
-        @media(max-width:768px){
-            nav {
-                display: none;
-                flex-direction: column;
-                background: var(--brand-green);
-                width: 100%;
-                text-align: center;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            .menu-toggle {
-                display: block;
-                color: #fff;
-            }
-        }
-
-        .show {
-            display: flex !important;
-        }
-
-        /* Simple slide-in animation */
-        .slide-in {
-            transform: translateX(-50px);
-            opacity: 0;
-            transition: transform 0.4s ease, opacity 0.4s ease;
-        }
-
-        .slide-in.visible {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    </style>
+/* Footer */
+footer { background:#222; color:#fff; text-align:center; padding:18px 10px; }
+</style>
 </head>
 <body>
 
@@ -207,14 +81,12 @@
     <div class="container">
         <div class="logo">
             <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
-            <div class="logo-info">
-                <h1>Vetoquinol Senior Distributor</h1>
-                <div class="motto">Achieve More Together</div>
-                <div class="distributor-name">Partner: <strong>Mr. Pavan K Jadhav</strong></div>
+            <div class="distributor-name">
+                <strong>Vetoquinol Senior Distributor</strong>
+                <span>Partner: Mr. Pavan K Jadhav</span>
             </div>
         </div>
-        <div class="menu-toggle" id="menu-toggle">&#x22EE;</div>
-        <nav id="navbar">
+        <nav>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="profile.html">Profile</a>
@@ -223,36 +95,29 @@
     </div>
 </header>
 
-<!-- Product Section -->
-<section class="product-section" id="products">
-    <!-- Product 1 -->
-    <div class="product-card slide-in">
-        <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin® Plus Joint Support">
+<!-- Featured Products -->
+<section class="product-section">
+    <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin Plus">
         <h3>Flexadin® Plus Joint Support</h3>
         <p>Supports joint health and mobility for pets.</p>
         <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
-
-    <!-- Product 2 -->
-    <div class="product-card slide-in">
-        <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin® Antibiotic">
-        <h3>Clavaseptin® Anti-infective Antibiotic</h3>
-        <p>Treats bacterial infections in pets effectively.</p>
+    <div class="product-card">
+        <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin">
+        <h3>Clavaseptin® Anti-infective</h3>
+        <p>Effective antibiotic for infections in pets.</p>
         <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
-
-    <!-- Product 3 -->
-    <div class="product-card slide-in">
-        <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl® Solution">
-        <h3>Marbocyl® Broad Anti-infective Solution</h3>
-        <p>Effective solution for treating bacterial infections in pets.</p>
+    <div class="product-card">
+        <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl">
+        <h3>Marbocyl® Broad Solution</h3>
+        <p>Treats a wide range of bacterial infections in pets.</p>
         <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
-
-    <!-- Product 4 -->
-    <div class="product-card slide-in">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine® Pain Management">
-        <h3>Tolfine® Pain and Inflammation</h3>
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine">
+        <h3>Tolfine® Pain & Inflammation</h3>
         <p>Relieves pain and inflammation in pets.</p>
         <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
@@ -260,36 +125,9 @@
 
 <!-- Footer -->
 <footer>
-    <p>Address: At Post Pune, Manchar, Maharashtra, India</p>
-    <p>Phone / WhatsApp: +91 99756‑57360</p>
     <p>Licensed distributor of genuine Vetoquinol products</p>
+    <p>Phone / WhatsApp: +91 99756‑57360</p>
 </footer>
-
-<script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
-
-    menuToggle.addEventListener('click', () => {
-        navbar.classList.toggle('show');
-    });
-
-    // Slide-in animation on scroll
-    const slideElems = document.querySelectorAll('.slide-in');
-
-    function checkSlide() {
-        const triggerBottom = window.innerHeight * 0.9;
-        slideElems.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < triggerBottom) {
-                el.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkSlide);
-    window.addEventListener('load', checkSlide);
-</script>
 
 </body>
 </html>
