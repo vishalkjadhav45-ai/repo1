@@ -1,120 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vetoquinol Senior Distributor - Profile</title>
-    <meta name="description" content="Profile of Mr. Pavan K Jadhav, official Vetoquinol senior distributor in Manchar & Pune. Learn about our services, experience, and contact information.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --brand-green: #3C8A43;
-            --brand-dark: #2C5F36;
-            --brand-light: #f9faf9;
-            --brand-accent: #78b74b;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+<title>Profile – Vetoquinol Senior Distributor</title>
+<meta name="description" content="Profile of Mr. Pavan K Jadhav, authorized Vetoquinol Senior Distributor in Manchar & Pune.">
 
-        body { background: var(--brand-light); color: #333; }
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        /* Header */
-        header {
-            background: var(--brand-green);
-            color: #fff;
-            padding: 18px 0;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
+<style>
+:root {
+    --brand-green: #3C8A43;
+    --brand-dark: #2C5F36;
+    --brand-light: #f9faf9;
+    --brand-accent: #78b74b;
+}
 
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 
-        .logo { display: flex; align-items: center; gap: 15px; }
-        .logo img { height: 60px; }
-        nav { margin-left: auto; }
-        nav a { color: #fff; margin-left: 18px; text-decoration: none; font-weight: 600; }
-        nav a:hover { text-decoration: underline; }
+body {
+    background: var(--brand-light);
+    color: #333;
+}
 
-        .distributor-name { font-size: 1.1rem; font-weight: 500; color: #fff; }
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        /* Profile Sections */
-        .profile-section { padding: 50px 0; background: #fff; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-        .profile-section h2 { text-align: center; color: var(--brand-dark); margin-bottom: 15px; }
-        .profile-section p { text-align: center; max-width: 800px; margin: 10px auto; line-height: 1.6; }
-        .profile-section .motto { font-style: italic; color: var(--brand-accent); font-weight: 500; }
+/* Header */
+header {
+    background: var(--brand-green);
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 
-        /* Owner Details */
-        .owner-card {
-            max-width: 600px;
-            margin: 30px auto;
-            background: #f9f9f9;
-            padding: 20px 25px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .owner-card h3 { margin-bottom: 10px; color: var(--brand-dark); }
-        .owner-card p { margin-bottom: 8px; color: #555; }
-        .owner-card .note { margin-top: 12px; font-style: italic; line-height: 1.5; }
+.header-flex {
+    display: flex;
+    align-items: center;
+}
 
-        /* Achievements */
-        .achievements { display: flex; justify-content: center; gap: 40px; margin-top: 20px; flex-wrap: wrap; }
-        .achievement { background: var(--brand-green); color: #fff; padding: 15px 25px; border-radius: 6px; font-weight: 600; text-align: center; min-width: 180px; }
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 
-        /* Map */
-        .map-container { max-width: 800px; margin: 30px auto; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+/* Nav */
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
 
-        /* CTA Buttons */
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-        }
-        .cta-buttons a {
-            padding: 12px 28px;
-            background: var(--brand-green);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        .cta-buttons a:hover { background: var(--brand-accent); }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-        /* Footer */
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 22px 14px;
-        }
-        footer p { margin: 6px 0; }
+/* Mobile menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+}
 
-        /* Responsive */
-        @media(max-width:768px){
-            header { flex-direction: column; text-align: center; }
-            nav { margin-top: 10px; }
-            nav a { margin: 8px; }
-        }
-    </style>
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* Page title */
+.page-title {
+    text-align: center;
+    padding: 40px 15px 20px;
+}
+
+.page-title h1 {
+    color: var(--brand-dark);
+    font-size: 2.2rem;
+}
+
+.page-title p {
+    color: #555;
+}
+
+/* Sections */
+.section {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1000px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.section h2 {
+    color: var(--brand-dark);
+    margin-bottom: 15px;
+}
+
+/* Owner card */
+.owner-card {
+    max-width: 600px;
+    margin: auto;
+}
+
+.owner-card h3 {
+    color: var(--brand-dark);
+    margin-bottom: 10px;
+}
+
+.owner-card p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.owner-card .note {
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* Achievements */
+.achievements {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.achievement {
+    background: var(--brand-green);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    min-width: 200px;
+}
+
+/* Map */
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* CTA */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.cta-buttons a {
+    padding: 14px 26px;
+    background: var(--brand-green);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    min-height: 44px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        background: var(--brand-green);
+        border-radius: 6px;
+    }
+
+    nav a {
+        padding: 10px;
+        display: block;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<!-- Header -->
 <header>
-    <div class="container">
-        <div class="logo">
-            <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
-            <div>
-                <h1>Vetoquinol Senior Distributor</h1>
-                <div class="motto">Achieve More Together</div>
-                <div class="distributor-name">Partner: <strong>Mr. Pavan K Jadhav</strong></div>
-            </div>
+    <div class="container header-flex">
+        <div class="logo">Vetoquinol Distributor</div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <nav>
+
+        <nav id="mobileNav">
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="contact.html">Contact</a>
@@ -122,58 +242,68 @@
     </div>
 </header>
 
-<!-- Organization Overview -->
-<section class="profile-section">
-    <h2>About Our Organization</h2>
-    <p>We are authorized senior distributors of Vetoquinol in Pune & Manchar, providing high-quality veterinary solutions for livestock and pets.</p>
-    <p class="motto">“Achieve More Together”</p>
+<section class="page-title">
+    <h1>Profile</h1>
+    <p>Authorized Vetoquinol Senior Distributor</p>
 </section>
 
-<!-- Owner Details -->
-<section class="profile-section">
+<section class="section">
+    <h2>About Our Organization</h2>
+    <p>We are authorized senior distributors of Vetoquinol, serving Manchar & Pune with genuine veterinary products.</p>
+    <p><em>“Achieve More Together”</em></p>
+</section>
+
+<section class="section">
+    <h2>Owner Details</h2>
     <div class="owner-card">
         <h3>Mr. Pavan K Jadhav</h3>
         <p><strong>Role:</strong> Senior Distributor</p>
-        <p><strong>Phone / WhatsApp:</strong> +91 99756-57360</p>
+        <p><strong>Phone / WhatsApp:</strong> +91 99756 57360</p>
         <p><strong>Email:</strong> pavanpatiljadhav@gmail.com</p>
-        <p class="note">With over 5 years of experience in veterinary product distribution, I am committed to delivering genuine, high-quality solutions for pets and livestock. My goal is to build lasting relationships with veterinarians and animal owners by providing reliable service and expert guidance.</p>
+        <p class="note">
+            With over 5 years of experience in veterinary distribution, I focus on delivering genuine products and trusted service to veterinarians and animal owners.
+        </p>
     </div>
 </section>
 
-<!-- Achievements -->
-<section class="profile-section">
+<section class="section">
     <h2>Our Achievements</h2>
     <div class="achievements">
         <div class="achievement">5+ Years of Trusted Service</div>
     </div>
 </section>
 
-<!-- Areas of Service / Map -->
-<section class="profile-section">
+<section class="section">
     <h2>Areas of Service</h2>
-    <p>Serving Manchar & Pune, Maharashtra</p>
+    <p>Manchar & Pune, Maharashtra</p>
     <div class="map-container">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.346556429202!2d73.80697507517163!3d19.028128957127125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd2b0d92ffdb11%3A0xd3c1a8cbd02d8a2e!2sManchar%2C%20Maharashtra%20411608!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            src="https://www.google.com/maps?q=Manchar,Maharashtra,India&output=embed"
+            width="100%" 
+            height="350" 
+            style="border:0;" 
+            loading="lazy">
         </iframe>
     </div>
 </section>
 
-<!-- Call-to-Action -->
-<section class="profile-section">
+<section class="section">
     <div class="cta-buttons">
         <a href="products.html">View Products</a>
-        <a href="https://wa.me/919975657360" target="_blank">Contact on WhatsApp</a>
+        <a href="https://wa.me/919975657360" target="_blank">WhatsApp</a>
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
-    <p>Address: At Post Pune, Manchar, Maharashtra, India</p>
-    <p>Phone / WhatsApp: +91 99756‑57360</p>
-    <p>Licensed distributor of genuine Vetoquinol products</p>
+    <p>Authorized Vetoquinol Senior Distributor</p>
+    <p>📞 +91 99756 57360</p>
 </footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mobileNav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
