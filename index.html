@@ -40,9 +40,14 @@ header .container {
 .header-left img { height: 60px; }
 .header-left .title h1 { font-size: 1.6rem; }
 .header-left .title p { font-size: 0.95rem; margin-top: 4px; }
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 nav a {
     color: #fff;
-    margin-left: 20px;
+    margin-left: 0;
     text-decoration: none;
     font-weight: 600;
     padding: 6px 10px;
@@ -115,20 +120,6 @@ nav a:hover { background: rgba(255,255,255,0.2); }
 }
 .product-card button:hover { background: var(--brand-accent); }
 
-/* View All Products Button */
-.view-all { text-align: center; margin-top: 20px; }
-.view-all a {
-    padding: 10px 24px;
-    font-size: 1rem;
-    background: var(--brand-green);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background 0.3s;
-}
-.view-all a:hover { background: var(--brand-accent); }
-
 /* Footer */
 footer {
     background: #222;
@@ -146,7 +137,7 @@ footer p { margin: 5px 0; }
 @media(max-width:768px){
     header .container { flex-direction: column; align-items: center; }
     header .header-left { justify-content: center; margin-bottom: 10px; }
-    nav { margin-top: 0; display: flex; gap: 12px; }
+    nav { margin-top: 0; flex-wrap: wrap; justify-content: center; }
     header .header-left .title h1 { font-size: 1.3rem; }
     header .header-left .title p { font-size: 0.85rem; }
     .intro h2 { font-size: 1.3rem; }
@@ -199,9 +190,11 @@ footer p { margin: 5px 0; }
             <h4>Marbocyl® Broad Anti-infective</h4>
             <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
         </div>
-    </div>
-    <div class="view-all">
-        <a href="products.html">View All Products</a>
+        <div class="product-card">
+            <img src="https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/2023-08/Mix%20Aluspray%201.jpg?itok=q2SpPkY9" alt="Aluspray">
+            <h4>Aluspray® Wound Care</h4>
+            <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+        </div>
     </div>
 </section>
 
