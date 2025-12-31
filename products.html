@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profile - Vetoquinol</title>
+<title>Products - Vetoquinol</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -29,33 +29,43 @@ header {
 .logo { display: flex; align-items: center; gap: 12px; }
 .logo img { height: 50px; }
 .distributor-name { display: flex; flex-direction: column; font-size: 0.95rem; }
-nav { display: flex; gap: 15px; margin-left: auto; flex-wrap: wrap; }
+nav { display: flex; gap: 15px; margin-left: auto; flex-wrap: nowrap; } /* horizontal always */
 nav a { color: #fff; text-decoration: none; font-weight: 600; white-space: nowrap; }
 nav a:hover { text-decoration: underline; }
 
-/* Profile Section */
-.profile-section { 
-    padding: 50px 20px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
+/* Product Section */
+.product-section { 
+    padding: 40px 20px; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); 
+    gap: 25px; 
 }
-.profile-section h1 { color: var(--brand-dark); font-size:2.5rem; margin-bottom: 25px; }
-.profile-card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 600px;
-    width: 100%;
-    margin-bottom: 20px;
+.product-card { 
+    background: #fff; 
+    border-radius: 10px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
-.profile-card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.2); }
-.profile-card img { width:150px; height:150px; object-fit:cover; border-radius:50%; margin-bottom:15px; }
-.profile-card h3 { font-size:1.5rem; color: var(--brand-dark); margin-bottom:10px; }
-.profile-card p { font-size:1rem; color:#555; margin-bottom:8px; }
+.product-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+.product-card img { width:100%; height:auto; margin-bottom:10px; object-fit:contain; }
+.product-card h3 { color: var(--brand-dark); margin-bottom:8px; font-size:1.2rem; }
+.product-card p { color:#555; margin-bottom:12px; font-size:1rem; }
+.product-card button { 
+    padding:10px 20px; 
+    background: var(--brand-green); 
+    color:#fff; 
+    border:none; 
+    border-radius:5px; 
+    cursor:pointer; 
+    font-weight:600; 
+    transition:background var(--transition-speed);
+}
+.product-card button:hover { background: var(--brand-accent); }
 
 /* Footer */
 footer { background:#222; color:#fff; text-align:center; padding:18px 10px; }
@@ -64,8 +74,7 @@ footer p { margin:6px 0; }
 /* Responsive */
 @media(max-width:768px){ 
     .container { flex-direction: column; align-items: center; }
-    nav { justify-content: center; flex-wrap: wrap; }
-    .profile-card img { width:120px; height:120px; }
+    nav { justify-content: center; flex-wrap: nowrap; } /* horizontal on mobile */
 }
 </style>
 </head>
@@ -90,20 +99,31 @@ footer p { margin:6px 0; }
     </div>
 </header>
 
-<!-- Profile Section -->
-<section class="profile-section">
-    <h1>Our Profile</h1>
-    <div class="profile-card">
-        <img src="https://via.placeholder.com/150.png?text=Mr+Pavan+K+Jadhav" alt="Mr. Pavan K Jadhav">
-        <h3>Mr. Pavan K Jadhav</h3>
-        <p>Senior Distributor of Vetoquinol Products</p>
-        <p>Experience: 10+ years in veterinary product distribution</p>
-        <p>Contact: +91 99756‑57360</p>
+<!-- Featured Products -->
+<section class="product-section">
+    <div class="product-card">
+        <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin Plus">
+        <h3>Flexadin® Plus Joint Support</h3>
+        <p>Supports joint health and mobility for pets.</p>
+        <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
-    <div class="profile-card">
-        <img src="https://via.placeholder.com/150.png?text=Team+Member" alt="Team Member">
-        <h3>Team Members</h3>
-        <p>Our dedicated team supports veterinary professionals and clients.</p>
+    <div class="product-card">
+        <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin">
+        <h3>Clavaseptin® Anti-infective</h3>
+        <p>Effective antibiotic for infections in pets.</p>
+        <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+    </div>
+    <div class="product-card">
+        <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl">
+        <h3>Marbocyl® Broad Solution</h3>
+        <p>Treats a wide range of bacterial infections in pets.</p>
+        <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+    </div>
+    <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine">
+        <h3>Tolfine® Pain & Inflammation</h3>
+        <p>Relieves pain and inflammation in pets.</p>
+        <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
 </section>
 
