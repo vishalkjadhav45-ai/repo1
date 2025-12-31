@@ -1,279 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact Us - Vetoquinol Distributor</title>
-<meta name="description" content="Contact Vetoquinol Senior Distributor in Manchar, Pune for veterinary products.">
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-<style>
-:root {
-    --brand-green: #3C8A43;
-    --brand-dark: #2C5F36;
-    --brand-light: #f9faf9;
-    --brand-accent: #78b74b;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-body {
-    background: var(--brand-light);
-    color: #333;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Header */
-header {
-    background: var(--brand-green);
-    color: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.header-flex {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-/* Nav */
-nav {
-    margin-left: auto;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* Mobile menu */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-}
-
-/* Page title */
-.page-title {
-    text-align: center;
-    padding: 40px 15px 20px;
-}
-
-.page-title h1 {
-    color: var(--brand-dark);
-    font-size: 2.2rem;
-}
-
-/* Contact cards */
-.contact-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.contact-card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-.contact-card i {
-    font-size: 36px;
-    color: var(--brand-green);
-    margin-bottom: 10px;
-}
-
-.contact-card a {
-    color: var(--brand-dark);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-/* Quick buttons */
-.quick-actions {
-    margin: 40px 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.quick-actions a {
-    padding: 14px 22px;
-    background: var(--brand-green);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    min-height: 44px;
-}
-
-/* Map */
-.map-container {
-    margin: 50px 0;
-    height: 350px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        text-align: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Vetoquinol</title>
+  <meta name="description" content="Contact Vetoquinol Senior Distributor for more details on veterinary products and services.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --brand-green: #3C8A43;
+      --brand-dark: #2C5F36;
+      --brand-light: #f9faf9;
+      --brand-accent: #78b74b;
+      --transition-speed: 0.3s;
     }
 
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-        background: var(--brand-green);
-        border-radius: 6px;
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Roboto', sans-serif; }
+
+    body { background: var(--brand-light); color: #333; }
+
+    header {
+      background: var(--brand-green);
+      color:#fff;
+      padding:15px 20px;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      position: sticky;
+      top:0;
+      z-index:999;
     }
 
-    nav a {
-        padding: 10px;
-        display: block;
+    header .logo img { height:50px; }
+
+    nav { display:flex; gap:15px; }
+
+    nav a { color:#fff; text-decoration:none; font-weight:600; }
+
+    nav a:hover { text-decoration: underline; }
+
+    .menu-toggle { display:none; font-size:28px; cursor:pointer; }
+
+    .mobile-nav { display:none; flex-direction:column; background:var(--brand-green); }
+
+    .mobile-nav a {
+      padding:10px 20px;
+      border-top:1px solid #2c5f36;
     }
 
-    nav.active {
-        display: flex;
+    .page-heading { text-align:center; padding:40px 20px; font-size:2rem; color: var(--brand-dark); }
+
+    .contact-section { padding:50px 20px; max-width:900px; margin:0 auto; }
+
+    .contact-info {
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-bottom:40px;
     }
 
-    .menu-toggle {
-        display: flex;
+    .contact-info div {
+      background:#fff;
+      padding:20px;
+      border-radius:8px;
+      text-align:center;
+      min-width:200px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     }
-}
-</style>
+
+    .contact-info div:hover {
+      transform: translateY(-5px);
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .contact-info i { font-size:36px; color: var(--brand-green); margin-bottom:8px; }
+
+    .contact-info p { color:#555; font-size:1rem; }
+
+    .contact-form {
+      background:#fff;
+      padding:30px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom:40px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width:100%;
+      padding:12px;
+      margin-bottom:15px;
+      border-radius:5px;
+      border:1px solid #ddd;
+    }
+
+    .contact-form button {
+      padding:12px 24px;
+      background:var(--brand-green);
+      color:#fff;
+      border:none;
+      border-radius:5px;
+      font-weight:600;
+      cursor:pointer;
+      transition: background var(--transition-speed);
+    }
+
+    .contact-form button:hover { background:var(--brand-accent); }
+
+    .map-container { height:400px; margin-bottom:50px; border-radius:8px; overflow:hidden; }
+
+    footer { background:#222; color:#fff; text-align:center; padding:20px 10px; }
+    footer p { margin:5px 0; }
+
+    @media(max-width:768px){
+      nav { display:none; }
+      .menu-toggle { display:block; }
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
-    <div class="container header-flex">
-        <div class="logo">Vetoquinol Distributor</div>
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav id="mobileNav">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
+  <div class="logo">
+    <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="profile.html">Profile</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="menu-toggle" onclick="toggleMobileMenu()">☰</div>
 </header>
 
-<section class="page-title">
-    <h1>Contact Us</h1>
-    <p>We’re here to help you with your orders</p>
-</section>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="profile.html">Profile</a>
+  <a href="contact.html">Contact</a>
+</div>
 
-<section class="container">
+<div class="page-heading">Contact Us</div>
 
-    <div class="contact-cards">
-        <div class="contact-card">
-            <i class="fas fa-phone"></i>
-            <p><a href="tel:+919975657360">+91 99756 57360</a></p>
-        </div>
-
-        <div class="contact-card">
-            <i class="fab fa-whatsapp"></i>
-            <p><a href="https://wa.me/919975657360" target="_blank">Chat on WhatsApp</a></p>
-        </div>
-
-        <div class="contact-card">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>Manchar, Pune<br>Maharashtra</p>
-        </div>
-
-        <div class="contact-card">
-            <i class="fab fa-instagram"></i>
-            <p><a href="https://www.instagram.com/pavanj_60/" target="_blank">@pavanj_60</a></p>
-        </div>
+<section class="contact-section">
+  <div class="contact-info">
+    <div>
+      <i class="fas fa-phone-alt"></i>
+      <p>Phone / WhatsApp: <strong>+91 99756‑57360</strong></p>
     </div>
-
-    <div class="quick-actions">
-        <a href="tel:+919975657360">📞 Call Now</a>
-        <a href="https://wa.me/919975657360" target="_blank">💬 WhatsApp</a>
+    <div>
+      <i class="fas fa-envelope"></i>
+      <p>Email: <strong>info@vetoquinol.com</strong></p>
     </div>
-
-    <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps?q=Manchar,Maharashtra,India&output=embed"
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            loading="lazy">
-        </iframe>
+    <div>
+      <i class="fas fa-map-marker-alt"></i>
+      <p>At Post Pune, Manchar, Maharashtra, India</p>
     </div>
+    <div>
+      <i class="fab fa-instagram"></i>
+      <p>Instagram: <a href="https://www.instagram.com/pavanj_60/" target="_blank"><strong>@pavanj_60</strong></a></p>
+    </div>
+  </div>
 
+  <div class="contact-form">
+    <form action="submit_form.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=Manchar,+Maharashtra,+India" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 </section>
 
 <footer>
-    <p>Authorized Vetoquinol Senior Distributor</p>
-    <p>📞 +91 99756 57360</p>
+  <p>Licensed distributor of genuine Vetoquinol products</p>
+  <p>Phone / WhatsApp: +91 99756‑57360</p>
 </footer>
 
 <script>
-function toggleMenu() {
-    document.getElementById("mobileNav").classList.toggle("active");
-}
+  function toggleMobileMenu(){
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+  }
 </script>
 
 </body>

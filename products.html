@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vetoquinol Products - Home</title>
+  <title>Vetoquinol Products</title>
   <meta name="description" content="Explore high-quality veterinary products from Vetoquinol for pets and livestock.">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -19,11 +19,12 @@
 
     body { background: var(--brand-light); color:#333; }
 
+    /* Header */
     header {
       background: var(--brand-green);
       color: #fff;
       padding: 15px 20px;
-      display: flex;
+      display:flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
@@ -38,20 +39,12 @@
       gap:15px;
     }
 
-    nav a {
-      color:#fff;
-      text-decoration:none;
-      font-weight:600;
-    }
+    nav a { color:#fff; text-decoration:none; font-weight:600; }
 
     nav a:hover { text-decoration: underline; }
 
     /* Mobile menu */
-    .menu-toggle {
-      display:none;
-      font-size: 28px;
-      cursor:pointer;
-    }
+    .menu-toggle { display:none; font-size:28px; cursor:pointer; }
 
     .mobile-nav { display:none; flex-direction:column; background:var(--brand-green); }
 
@@ -60,34 +53,17 @@
       border-top:1px solid #2c5f36;
     }
 
-    /* Hero Section */
-    .hero {
+    /* Page Heading */
+    .page-heading {
       text-align:center;
-      padding:60px 20px;
-      background: #e8f5e9;
+      padding:40px 20px;
+      font-size:2rem;
+      color: var(--brand-dark);
     }
 
-    .hero h1 { font-size:2.5rem; color: var(--brand-dark); margin-bottom:20px; }
-
-    .hero p { font-size:1.2rem; margin-bottom:30px; }
-
-    .hero .cta-buttons { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; }
-
-    .hero .cta-buttons a {
-      padding:12px 28px;
-      background:var(--brand-green);
-      color:#fff;
-      text-decoration:none;
-      border-radius:6px;
-      font-weight:600;
-      transition:background var(--transition-speed);
-    }
-
-    .hero .cta-buttons a:hover { background:var(--brand-accent); }
-
-    /* Featured Products */
+    /* Product Section */
     .product-section {
-      padding:50px 20px;
+      padding:30px 20px;
       display:grid;
       grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
       gap:25px;
@@ -170,18 +146,12 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Explore Our Vetoquinol Products</h1>
-    <p>High-quality veterinary products for pets and livestock.</p>
-    <div class="cta-buttons">
-      <a href="products.html">View Products</a>
-      <a href="https://wa.me/919975657360" target="_blank">Contact on WhatsApp</a>
-    </div>
-  </section>
+  <!-- Page Heading -->
+  <div class="page-heading">Our Products</div>
 
-  <!-- Featured Products -->
+  <!-- Product Section -->
   <section class="product-section" id="products">
+    <!-- Product 1 -->
     <div class="product-card">
       <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin® Plus">
       <h3>Flexadin® Plus Joint Support</h3>
@@ -189,6 +159,7 @@
       <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
 
+    <!-- Product 2 -->
     <div class="product-card">
       <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin®">
       <h3>Clavaseptin® Antibiotic</h3>
@@ -196,10 +167,35 @@
       <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
 
+    <!-- Product 3 -->
     <div class="product-card">
       <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl®">
       <h3>Marbocyl® Anti-infective Solution</h3>
       <p>Treats a wide range of bacterial infections in pets.</p>
+      <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine®">
+      <h3>Tolfine® Pain & Inflammation</h3>
+      <p>Relieves pain and inflammation for pets.</p>
+      <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <img src="https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/2023-08/Mix%20Aluspray%201.jpg?itok=q2SpPkY9" alt="Aluspray®">
+      <h3>Aluspray® Wound Care</h3>
+      <p>Protects and promotes healing of wounds in pets.</p>
+      <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <img src="https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/2023-08/Mix%20Aluspray%201.jpg?itok=q2SpPkY9" alt="Cystaid®">
+      <h3>Cystaid® Urinary Support</h3>
+      <p>Supports urinary health for cats and dogs prone to issues.</p>
       <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
     </div>
   </section>
@@ -236,6 +232,7 @@
     // Run once on load
     checkProducts();
   </script>
+
 </body>
 </html>
 
