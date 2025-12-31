@@ -3,332 +3,266 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vetoquinol Senior Distributor - Manchar, Pune</title>
-<meta name="description" content="Official Vetoquinol senior distributor in Manchar & Pune offering trusted veterinary products.">
-
+<title>Vetoquinol Senior Distributor</title>
+<meta name="description" content="Explore high-quality veterinary products from Vetoquinol for pets and livestock.">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
-:root {
-    --brand-green: #3C8A43;
-    --brand-dark: #2C5F36;
-    --brand-light: #f9faf9;
-    --brand-accent: #78b74b;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-body {
-    background: var(--brand-light);
-    color: #333;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-
-/* Header */
-header {
-    background: var(--brand-green);
-    color: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo img {
-    height: 55px;
-}
-
-.logo-text h2 {
-    font-size: 1.2rem;
-}
-
-.distributor-name {
-    font-size: 0.95rem;
-}
-
-/* Navigation */
-nav {
-    margin-left: auto;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* Mobile Menu Button */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
-/* Hero */
-.hero {
-    background: #fff;
-    padding: 70px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 2.4rem;
-    color: var(--brand-green);
-    margin-bottom: 15px;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.hero a {
-    padding: 12px 24px;
-    background: var(--brand-green);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    min-height: 44px;
-}
-
-/* About */
-.about {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.about h2 {
-    color: var(--brand-dark);
-    margin-bottom: 10px;
-}
-
-.about p {
-    max-width: 800px;
-    margin: 10px auto;
-}
-
-/* Products */
-.products {
-    background: #fff;
-    padding: 60px 0;
-}
-
-.products h2 {
-    text-align: center;
-    color: var(--brand-dark);
-    margin-bottom: 25px;
-}
-
-.products-grid {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-}
-
-.product-card {
-    min-width: 220px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-.product-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-.product-card h3 {
-    margin-bottom: 5px;
-    color: var(--brand-dark);
-}
-
-.product-card button {
-    margin-top: 10px;
-    padding: 10px 18px;
-    background: var(--brand-green);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    min-height: 44px;
-}
-
-/* CTA */
-.cta {
-    background: var(--brand-dark);
-    color: #fff;
-    text-align: center;
-    padding: 45px 20px;
-}
-
-/* Footer */
-footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
+    :root {
+        --brand-green: #3C8A43;
+        --brand-dark: #2C5F36;
+        --brand-light: #f9faf9;
+        --brand-accent: #78b74b;
+        --transition-speed: 0.3s;
     }
 
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+        background: var(--brand-light);
+        color: #333;
+    }
+
+    /* Header */
+    header {
         background: var(--brand-green);
-        margin-top: 10px;
-        border-radius: 6px;
+        color: #fff;
+        padding: 18px 0;
+        position: sticky;
+        top: 0;
+        z-index: 999;
     }
 
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo img { height: 60px; }
+    nav { margin-left: auto; }
     nav a {
-        padding: 10px;
-        display: block;
+        color: #fff;
+        margin-left: 18px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color var(--transition-speed);
+    }
+    nav a:hover { color: var(--brand-accent); }
+
+    /* Hero Section */
+    .hero {
+        background: var(--brand-green);
+        color: #fff;
+        text-align: center;
+        padding: 60px 20px;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.2rem; }
+
+    /* Carousel Section */
+    .products-section { padding: 50px 20px; }
+    .products-section h2 {
+        text-align: center;
+        color: var(--brand-dark);
+        margin-bottom: 40px;
     }
 
-    nav.active {
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .carousel-track {
         display: flex;
-        animation: slideDown 0.3s ease;
+        transition: transform 0.5s ease-in-out;
     }
 
-    .menu-toggle {
-        display: flex;
+    .product-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        min-width: 300px;
+        margin: 0 10px;
+        flex-shrink: 0;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
+    .product-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 15px;
     }
-}
 
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    .product-card h3 {
+        color: var(--brand-dark);
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .product-card p {
+        color: #555;
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+
+    .product-card button {
+        padding: 10px 20px;
+        background: var(--brand-green);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background var(--transition-speed);
+    }
+
+    .product-card button:hover { background: var(--brand-accent); }
+
+    /* Dots */
+    .dots {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0 5px;
+        background: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .dot.active { background: var(--brand-green); }
+
+    /* Footer */
+    footer {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 22px 14px;
+        margin-top: 40px;
+    }
+    footer p { margin: 6px 0; }
+
+    /* Responsive */
+    @media(max-width:768px){
+        .hero h1 { font-size: 2rem; }
+        .product-card { min-width: 250px; margin: 0 5px; }
+    }
 </style>
 </head>
-
 <body>
 
+<!-- Header -->
 <header>
     <div class="container">
         <div class="logo">
             <img src="https://cdn.theorg.com/09999eb9-e335-423d-a1d6-fa27e7b75b27_medium.jpg" alt="Vetoquinol Logo">
-            <div class="logo-text">
-                <h2>Vetoquinol Senior Distributor</h2>
-                <div class="distributor-name">Partner: <strong>Pavan K Jadhav</strong></div>
-            </div>
         </div>
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav id="mobileNav" aria-label="Main Navigation">
-            <a href="profile.html">Profile</a>
+        <nav>
+            <a href="index.html">Home</a>
             <a href="products.html">Products</a>
+            <a href="profile.html">Profile</a>
             <a href="contact.html">Contact</a>
         </nav>
     </div>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
-    <h1>Premium Animal Health Distribution</h1>
-    <p>Official Vetoquinol senior distributor in Manchar & Pune.</p>
-    <div class="hero-buttons">
-        <a href="products.html">View Products</a>
-        <a href="https://wa.me/919975657360" target="_blank">WhatsApp</a>
-    </div>
+    <h1>Welcome to Vetoquinol Senior Distributor</h1>
+    <p>Providing high-quality veterinary products for pets and livestock in Pune & Manchar</p>
 </section>
 
-<section class="about">
-    <h2>About Us</h2>
-    <p>Authorized Vetoquinol senior partner delivering genuine veterinary solutions.</p>
-</section>
-
-<section class="products">
+<!-- Carousel Products -->
+<section class="products-section">
     <h2>Featured Products</h2>
-    <div class="products-grid">
-        <div class="product-card">
-            <img src="https://whiskeepetzone.com/wp-content/uploads/2024/09/Nutrich-Pets-Nutritional-Supplement-For-Dog-and-Cats-1.jpg" loading="lazy">
-            <h3>Flexadin®</h3>
-            <p>Joint support</p>
-            <button onclick="location.href='https://wa.me/919975657360'">Order</button>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin® Plus">
+                <h3>Flexadin® Plus</h3>
+                <p>Supports joint health for dogs & cats.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin®">
+                <h3>Clavaseptin®</h3>
+                <p>Anti-infective antibiotic for pets.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl®">
+                <h3>Marbocyl®</h3>
+                <p>Broad anti-infective solution for pets.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine®">
+                <h3>Tolfine®</h3>
+                <p>Pain and inflammation management for pets.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
         </div>
     </div>
 </section>
 
-<section class="cta">
-    <h2>Ready to Order?</h2>
-    <p>📞 +91 99756-57360</p>
-</section>
-
+<!-- Footer -->
 <footer>
-    <p>Manchar, Pune, Maharashtra</p>
-    <p>Licensed distributor of Vetoquinol</p>
+    <p>Address: At Post Pune, Manchar, Maharashtra, India</p>
+    <p>Phone / WhatsApp: +91 99756‑57360</p>
+    <p>Licensed distributor of genuine Vetoquinol products</p>
 </footer>
 
 <script>
-function toggleMenu() {
-    document.getElementById("mobileNav").classList.toggle("active");
+const track = document.querySelector('.carousel-track');
+const dots = document.querySelectorAll('.dot');
+const productCount = document.querySelectorAll('.product-card').length;
+let currentIndex = 0;
+
+// Move carousel to selected index
+function moveTo(index){
+    const cardWidth = document.querySelector('.product-card').offsetWidth + 20; // margin included
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    currentIndex = index;
 }
+
+// Dot click
+dots.forEach(dot => {
+    dot.addEventListener('click', () => moveTo(Number(dot.dataset.index)));
+});
+
+// Optional: Auto-slide every 5s
+// setInterval(() => {
+//     let nextIndex = (currentIndex + 1) % productCount;
+//     moveTo(nextIndex);
+// }, 5000);
 </script>
 
 </body>

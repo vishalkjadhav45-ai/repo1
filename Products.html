@@ -3,18 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Vetoquinol Products</title>
-<meta name="description" content="Explore genuine Vetoquinol veterinary products for pets and livestock.">
-
+<meta name="description" content="Explore high-quality veterinary products from Vetoquinol for pets and livestock, now available for order.">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
 :root {
     --brand-green: #3C8A43;
     --brand-dark: #2C5F36;
     --brand-light: #f9faf9;
     --brand-accent: #78b74b;
+    --transition-speed: 0.3s;
 }
 
 * {
@@ -29,130 +27,100 @@ body {
     color: #333;
 }
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Header */
 header {
     background: var(--brand-green);
     color: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.header-flex {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-/* Nav */
-nav {
-    margin-left: auto;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* Mobile menu */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-}
-
-/* Page Title */
-.page-title {
+    padding: 18px 0;
     text-align: center;
-    padding: 40px 15px 20px;
 }
 
-.page-title h1 {
-    color: var(--brand-dark);
+header h1 {
     font-size: 2rem;
 }
 
-/* Products Grid */
-.products {
-    padding: 30px 0 60px;
+/* Product Slider Section */
+.product-section {
+    padding: 50px 20px;
 }
 
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
 }
 
 .product-card {
+    flex: 0 0 300px;
     background: #fff;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    border: 1px solid #ddd;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
 .product-card img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: contain;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .product-card h3 {
     color: var(--brand-dark);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 1.2rem;
 }
 
 .product-card p {
-    font-size: 0.95rem;
     color: #555;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .product-card button {
-    padding: 12px 20px;
+    padding: 10px 20px;
     background: var(--brand-green);
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: 600;
-    min-height: 44px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .product-card button:hover {
     background: var(--brand-accent);
+}
+
+/* Dots Navigation */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #bbb;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: var(--brand-green);
 }
 
 /* Footer */
@@ -160,125 +128,101 @@ footer {
     background: #222;
     color: #fff;
     text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+    padding: 22px 14px;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        text-align: center;
-    }
+footer p {
+    margin: 6px 0;
+}
 
-    nav {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-        background: var(--brand-green);
-        border-radius: 6px;
+/* Responsive */
+@media(max-width:768px){
+    .slider-track {
+        gap: 15px;
     }
-
-    nav a {
-        padding: 10px;
-        display: block;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
+    .product-card {
+        flex: 0 0 250px;
     }
 }
 </style>
 </head>
-
 <body>
 
 <header>
-    <div class="container header-flex">
-        <div class="logo">Vetoquinol Products</div>
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav id="mobileNav">
-            <a href="index.html">Home</a>
-            <a href="profile.html">Profile</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
+    <h1>Explore Our Vetoquinol Products</h1>
 </header>
 
-<section class="page-title">
-    <h1>Our Products</h1>
-    <p>Genuine veterinary solutions from Vetoquinol</p>
-</section>
+<section class="product-section">
+    <div class="slider-container">
+        <div class="slider-track">
+            <div class="product-card">
+                <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" alt="Flexadin® Plus Joint Support">
+                <h3>Flexadin® Plus Joint Support</h3>
+                <p>Supports joint health and mobility for pets.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
 
-<section class="products">
-    <div class="container products-grid">
+            <div class="product-card">
+                <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" alt="Clavaseptin® Anti-infective Antibiotic">
+                <h3>Clavaseptin® Anti-infective</h3>
+                <p>Effective antibiotic for pets against infections.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
 
-        <div class="product-card">
-            <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/pet-health-supplement/l/a/y/60-flexadin-forte-joint-support-chewable-tablets-for-dogs-cats-original-imahbchszwbbybpn.jpeg?q=90" loading="lazy">
-            <h3>Flexadin® Plus</h3>
-            <p>Joint support for dogs and cats</p>
-            <button onclick="location.href='https://wa.me/919975657360'">Order Now</button>
+            <div class="product-card">
+                <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" alt="Marbocyl® Broad Anti-infective">
+                <h3>Marbocyl® Broad Anti-infective</h3>
+                <p>Treats a wide range of bacterial infections in pets.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" alt="Tolfine® Pain and Inflammation">
+                <h3>Tolfine® Pain & Inflammation</h3>
+                <p>Relieves pain and inflammation in pets.</p>
+                <button onclick="window.location.href='https://wa.me/919975657360'">Order Now</button>
+            </div>
         </div>
+    </div>
 
-        <div class="product-card">
-            <img src="https://vetagrostore.com/image/cache/catalog/sklad/Clavaseptin%20tablets/DSC_0012_T-600x315.png" loading="lazy">
-            <h3>Clavaseptin®</h3>
-            <p>Anti-infective antibiotic</p>
-            <button onclick="location.href='https://wa.me/919975657360'">Order Now</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://anivita.vet/wp-content/uploads/2025/01/UVMAR09.png" loading="lazy">
-            <h3>Marbocyl®</h3>
-            <p>Broad anti-infective solution</p>
-            <button onclick="location.href='https://wa.me/919975657360'">Order Now</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZN9JtKXeKPrlYdR5UjmBSuJZBQnJa_59_NA&s" loading="lazy">
-            <h3>Tolfine®</h3>
-            <p>Pain & inflammation management</p>
-            <button onclick="location.href='https://wa.me/919975657360'">Order Now</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/2023-08/Mix%20Aluspray%201.jpg?itok=q2SpPkY9" loading="lazy">
-            <h3>Aluspray®</h3>
-            <p>Wound care spray</p>
-            <button onclick="location.href='https://wa.me/919975657360'">Order Now</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://www.vetoquinol.in/sites/incountry/files/styles/product_detail__photo_popup/public/2023-08/Mix%20Aluspray%201.jpg?itok=q2SpPkY9" loading="lazy">
-            <h3>Cystaid®</h3>
-            <p>Urinary health support</p>
-            <button onclick="location.href='https://wa.me/919975657360'">Order Now</button>
-        </div>
-
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
 </section>
 
 <footer>
-    <p>Manchar, Pune, Maharashtra</p>
-    <p>📞 +91 99756-57360</p>
-    <p>Authorized Vetoquinol Distributor</p>
+    <p>Address: At Post Pune, Manchar, Maharashtra, India</p>
+    <p>Phone / WhatsApp: +91 99756‑57360</p>
+    <p>Licensed distributor of genuine Vetoquinol products</p>
 </footer>
 
 <script>
-function toggleMenu() {
-    document.getElementById("mobileNav").classList.toggle("active");
+const track = document.querySelector('.slider-track');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+function updateSlider(index){
+    const cardWidth = document.querySelector('.product-card').offsetWidth + 20;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
 }
+
+// Dot click event
+dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+        currentIndex = idx;
+        updateSlider(currentIndex);
+    });
+});
+
+// Optional: auto slide every 5 sec
+// setInterval(() => {
+//     currentIndex = (currentIndex + 1) % dots.length;
+//     updateSlider(currentIndex);
+// }, 5000);
 </script>
 
 </body>
